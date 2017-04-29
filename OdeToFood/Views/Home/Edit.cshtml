@@ -1,0 +1,33 @@
+@model Restaurant 
+    @*using is in _ViewImports*@
+
+@{ 
+    ViewBag.Title = $"Edit {Model.Name}";
+}
+<div>
+    <h1>Editing: @Model.Name</h1>
+    <div>
+        <form method="post" asp-antiforgery="true">
+            <div>
+                @*@Html.LabelFor(m => m.Name)*@
+                <label asp-for="Name"></label>
+                @*@Html.EditorFor(m => m.Name)*@
+                <input asp-for="Name" />
+                @*@Html.ValidationMessageFor(m => m.Name)*@
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div>
+                @*@Html.LabelFor(m => m.Cuisine)*@
+                <label asp-for="Cuisine"></label>
+                @*@Html.DropDownListFor(m => m.Cuisine, Html.GetEnumSelectList(typeof(CuisineType)))*@
+                <select asp-for="Cuisine" asp-items="@Html.GetEnumSelectList(typeof(CuisineType))">
+                </select>
+                @*@Html.ValidationMessageFor(m => m.Cuisine)*@
+                <span asp-validation-for="Cuisine"></span>
+            </div>
+            <div>
+                <input type="submit" value="Save!" />
+            </div>
+        </form>
+    </div>
+</div>
