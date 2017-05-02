@@ -74,7 +74,7 @@ namespace OdeToFood
 
             app.UseMvc(ConfigureRoutes);
 
-            app.Run(ctx => ctx.Response.WriteAsync("Not found")); // if any route match.
+            //app.Run(ctx => ctx.Response.WriteAsync("Not found")); // if any route match.
         }
 
         private void ConfigureRoutes(IRouteBuilder routeBuilder)

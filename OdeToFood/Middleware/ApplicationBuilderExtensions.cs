@@ -13,7 +13,7 @@ namespace OdeToFood.Middleware
             var options = new StaticFileOptions();
             options.RequestPath = "/node_modules";
             options.FileProvider = provider;
-            app.UseStaticFiles();
+            app.UseStaticFiles(options);
             return app;
         }
     }
