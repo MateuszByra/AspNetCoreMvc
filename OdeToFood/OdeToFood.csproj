@@ -9,6 +9,7 @@
     <Folder Include="Controllers\" />
     <Folder Include="Views\Account\" />
     <Folder Include="Views\Shared\Components\Greeting\" />
+    <Folder Include="Views\Shared\Components\LoginLogout\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>

@@ -1,13 +1,13 @@
-@model RegisterUserViewModel
+@model LoginViewModel
 
-@{ 
-    ViewBag.Title = "Register";
+@{
+    ViewBag.Title = "Login";
 }
 
-<h1>Register</h1>
+<h1>Login</h1>
 
 <form method="post" asp-antiforgery="true">
-    
+
     <div asp-validation-summary="ModelOnly"></div>
 
     <div>
@@ -23,13 +23,13 @@
     </div>
 
     <div>
-        <label asp-for="ConfirmPassword"></label>
-        <input asp-for="ConfirmPassword" />
-        <span asp-validation-for="ConfirmPassword"></span>
+        <label asp-for="RememberMe"></label>
+        <input asp-for="RememberMe" />
+        <span asp-validation-for="RememberMe"></span>
     </div>
 
     <div>
-        <input type="submit" value="Register" />
+        <input type="submit" value="Login" />
     </div>
 
 </form>
