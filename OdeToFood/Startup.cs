@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Routing;
 using OdeToFood.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using OdeToFood.Middleware;
 
 namespace OdeToFood
 {
@@ -64,7 +65,10 @@ namespace OdeToFood
                 });
             }
 
-            app.UseStaticFiles();// use files in respond, eg. html.
+            app.UseFileServer();
+
+            app.UseNodeModules(env.ContentRootPath);
+            //app.UseStaticFiles();// use files in respond, eg. html.
 
             app.UseIdentity();
 
